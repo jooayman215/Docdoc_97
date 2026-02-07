@@ -1,10 +1,10 @@
-import 'package:docdocapp97/core/utils/colors_manager.dart';
-import 'package:docdocapp97/core/utils/txt_style.dart';
-import 'package:docdocapp97/core/widgets/app_button.dart';
-import 'package:docdocapp97/core/widgets/app_txt_feild.dart';
-import 'package:docdocapp97/features/auth/register/data/user_model.dart';
-import 'package:docdocapp97/features/auth/register/logic/cubit.dart';
-import 'package:docdocapp97/features/auth/register/logic/state.dart';
+import 'package:docdoc_app/core/utils/colors_manager.dart';
+import 'package:docdoc_app/core/utils/txt_style.dart';
+import 'package:docdoc_app/core/widgets/app_button.dart';
+import 'package:docdoc_app/core/widgets/app_txt_feild.dart';
+import 'package:docdoc_app/features/auth/register/data/user_model.dart';
+import 'package:docdoc_app/features/auth/register/logic/cubit.dart';
+import 'package:docdoc_app/features/auth/register/logic/state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

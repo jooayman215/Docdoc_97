@@ -1,5 +1,6 @@
-import 'package:docdocapp97/core/utils/colors_manager.dart';
-import 'package:docdocapp97/core/utils/txt_style.dart';
+
+import 'package:docdoc_app/core/utils/colors_manager.dart';
+import 'package:docdoc_app/core/utils/txt_style.dart';
 import 'package:flutter/material.dart';
 
 class AppButton extends StatelessWidget {

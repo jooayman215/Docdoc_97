@@ -1,0 +1,9 @@
+package_rename_config:
+  android:
+    app_name: "Docdoc"
+    package_name: "com.youssef.docdoc"
+
+  ios:
+    app_name: "Docdoc"
+    bundle_name: "Docdoc"
+    package_name: "com.youssef.docdoc"

@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:docdocapp97/core/const/api_const.dart';
-import 'package:docdocapp97/features/auth/register/data/user_model.dart';
-import 'package:docdocapp97/features/auth/register/logic/state.dart';
+import 'package:docdoc_app/core/const/api_const.dart';
+import 'package:docdoc_app/features/auth/register/data/user_model.dart';
+import 'package:docdoc_app/features/auth/register/logic/state.dart' show RegisterStates, RegisterInitialState, RegisterLoadingState, RegisterSuccessState, RegisterErrorState;
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RegisterCubit extends Cubit<RegisterStates> {
