@@ -1,6 +1,6 @@
-import 'package:docdoc_app/features/auth/register/presentation/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:docdoc_app/features/auth/login/presentation/screens/login_screen.dart';
 
 import '../../core/widgets/app_button.dart';
 import '../../core/utils/txt_style.dart';
@@ -17,7 +17,7 @@ class OnboardingScreen extends StatelessWidget {
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (_) =>  RegisterScreen()),
+      MaterialPageRoute(builder: (_) =>  LoginScreen()),
     );
   }
 

@@ -1,5 +1,6 @@
 import 'package:docdoc_app/core/utils/txt_style.dart';
-import 'package:docdoc_app/features/auth/register/presentation/screens/register_screen.dart';
+import 'package:docdoc_app/features/auth/login/presentation/screens/login_screen.dart';
+import 'package:docdoc_app/features/home/presentation/screens/home_screen.dart';
 import 'package:docdoc_app/features/onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -23,15 +24,33 @@ class _SplashScreenState extends State<SplashScreen> {
 
     final prefs = await SharedPreferences.getInstance();
     final seen = prefs.getBool('seen_onboarding') ?? false;
-
+    final token = prefs.getString("token");
+    final savedName = prefs.getString("username") ?? "";
     if (!mounted) return;
 
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (_) => seen ? RegisterScreen() : const OnboardingScreen(),
-      ),
-    );
+    // 1) لو الاونبوردينج مش متشاف
+    if (!seen) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => const OnboardingScreen()),
+      );
+      return;
+    }
+
+    // 2) لو متشاف وفيه توكن يبقى دخله الهوم
+    if (token != null && token.isNotEmpty) {
+      Navigator.pushReplacement(
+        context,
+          MaterialPageRoute(builder: (_) => HomeScreen(userName: savedName)),
+
+      );
+    } else {
+      // 3) لو متشاف ومفيش توكن يبقى لوجين
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => const LoginScreen()),
+      );
+    }
   }
 
   @override

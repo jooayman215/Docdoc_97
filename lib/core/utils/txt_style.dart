@@ -1,6 +1,5 @@
 import 'package:docdoc_app/core/utils/colors_manager.dart';
 import 'package:flutter/material.dart';
-
 class TxtStyle {
   static const TextStyle font16wight600White = TextStyle(
     fontWeight: FontWeight.w600,
@@ -40,5 +39,10 @@ class TxtStyle {
     fontWeight: FontWeight.w700,
     fontSize: 18,
     color: ColorsManager.textDark,
+  );
+  static TextStyle font12wight400Primary = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 12,
+    color: ColorsManager.primaryColor,
   );
 }
