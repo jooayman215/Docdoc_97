@@ -16,9 +16,18 @@ class RegisterCubit extends Cubit<RegisterStates> {
       if (response.statusCode == 200) {
         emit(RegisterSuccessState());
       }
-    } catch (e) {
-      print("==========register error $e");
-      emit(RegisterErrorState(errorMessage: e.toString()));
+    }on DioException catch (e) {
+      final data = e.response?.data;
+
+      String message = "Something went wrong";
+
+      if (data is Map && data['data'] != null) {
+        if (data['data']['email'] != null) {
+          message = data['data']['email'][0];
+        }
+      }
+
+      emit(RegisterErrorState(errorMessage: message));
     }
   }
 }
