@@ -38,11 +38,50 @@ class TxtStyle {
   static const TextStyle font18wight700textDark = TextStyle(
     fontWeight: FontWeight.w700,
     fontSize: 18,
-    color: ColorsManager.textDark,
+    color: ColorsManager.black,
   );
   static TextStyle font12wight400Primary = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 12,
     color: ColorsManager.primaryColor,
+  );
+  static TextStyle font18Weight700Black= TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w700,
+      color: ColorsManager.black
+  );
+  static TextStyle font11Weight400BlackGrey= TextStyle(
+      fontSize: 11,
+      fontWeight: FontWeight.w400,
+      color: ColorsManager.blackGrey
+  );static TextStyle font18Weight500White= TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w500,
+      color: ColorsManager.white
+  );
+  static TextStyle font13Weight400Primary= TextStyle(
+      fontSize: 13,
+      fontWeight: FontWeight.w400,
+      color: ColorsManager.primaryColor
+  );
+  static TextStyle font18Weight600Black= TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w600,
+      color: ColorsManager.black
+  );
+  static TextStyle font12Weight400BMoreBlack= TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w400,
+      color: ColorsManager.moreBlack
+  );
+  static TextStyle font12Weight500Grey= TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w500,
+      color: ColorsManager.grey
+  );
+  static TextStyle font14Weight400Grey= TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w400,
+      color: ColorsManager.grey
   );
 }

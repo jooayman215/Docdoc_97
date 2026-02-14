@@ -28,7 +28,6 @@ class _SplashScreenState extends State<SplashScreen> {
     final savedName = prefs.getString("username") ?? "";
     if (!mounted) return;
 
-    // 1) لو الاونبوردينج مش متشاف
     if (!seen) {
       Navigator.pushReplacement(
         context,
@@ -37,7 +36,6 @@ class _SplashScreenState extends State<SplashScreen> {
       return;
     }
 
-    // 2) لو متشاف وفيه توكن يبقى دخله الهوم
     if (token != null && token.isNotEmpty) {
       Navigator.pushReplacement(
         context,
@@ -45,7 +43,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
       );
     } else {
-      // 3) لو متشاف ومفيش توكن يبقى لوجين
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const LoginScreen()),

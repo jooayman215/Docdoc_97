@@ -16,7 +16,7 @@ class LoginCubit extends Cubit<LoginStates> {
 
     try {
       final response = await dio.post(
-        APIConst.login, // اعمله في api_const.dart زي register
+        APIConst.login,
         data: model.toJson(),
       );
 
@@ -35,7 +35,6 @@ class LoginCubit extends Cubit<LoginStates> {
 
       String message = "Something went wrong";
 
-      // نفس فكرة parsing اللي عاملها في RegisterCubit
       if (data is Map) {
         // لو backend بيرجع errors
         if (data["message"] != null) {
